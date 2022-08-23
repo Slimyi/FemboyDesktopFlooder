@@ -58,5 +58,6 @@ func Fetch(tags string, limit int, page int) Posts {
 	}
 	defer res.Body.Close()
 	xml.NewDecoder(res.Body).Decode(&result)
+	fmt.Println(result)
 	return result
 }
